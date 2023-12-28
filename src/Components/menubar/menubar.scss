@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+
+.menu-swrapper{
+    .icon{
+        color: white;
+    }
+    button{
+        border-radius: 0;
+        padding: 0 15px;
+        height: 60px;
+    }
+    button.active{
+        border-bottom: 1px solid #ececec;
+    }
+}

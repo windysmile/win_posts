@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.top-bar{
+    background-color: $theme-base;
+    padding: 0 20px;
+    color: white;
+    border-bottom: 3px solid #ececec;
+    .swrapper{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        .logo-search{
+            display: flex;
+            justify-content:start;
+            align-items: center;
+            .search{
+                background-color: white;
+                display: flex;
+                align-items: center;
+                color: $theme-font-dark;
+                border-radius: 10px;
+                margin-left: 5px;
+                .button-search{
+                    border-radius: 0 10px 10px 0;
+                    .search-icon{
+                        color: $theme-font-dark;
+                    }
+                }
+            }
+        }
+        .noti-profile-icon{
+            display: flex;
+            justify-content:space-between;
+            align-items:center;
+            .app{
+                border-right: 1px solid $theme-border-dark;
+                margin-right: 5px;
+            }
+        }
+    }
+}

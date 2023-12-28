@@ -1,0 +1,29 @@
+
+@import '../../../variables.scss';
+
+
+.main-menu-container{
+    .user-info{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    .side-menu-widget{
+        padding: 10px 10px 10px 0;
+        border-bottom: 1px solid $theme-border-dark;
+        .menu-item{
+            button{
+                width: 100%;
+                border-radius: 10px;
+                font-size: 1rem;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                svg{
+                    color: $theme-base;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

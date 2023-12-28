@@ -1,0 +1,49 @@
+@import '../../variables.scss';
+
+.comment-content{
+    .comments-swrapper{
+        margin: 0 10px;
+        padding: 10px 0;
+        border-top: 1px solid $theme-border-dark;
+        .comments-view{
+            display: flex;
+            align-items: center;
+            .text-comment{
+                .text{
+                    padding: 10px;
+                    background-color: white;
+                    border-radius: 10px;
+                }
+                .date{
+                    font-size: 0.8rem;
+                    color: $theme-font-dark;
+                }
+            }
+        }
+    }
+    .add-comment{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .react-emoji{
+            align-items: start;
+            .react-input-emoji--container{
+                border-radius: 5px !important;
+                .react-input-emoji--wrapper{
+                    .react-input-emoji--placeholder{
+                        margin-top: 10px;
+                        align-items: start;
+                    }
+                    .react-input-emoji--input{
+                        min-height: 1rem;
+                        width: 22rem;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .react-input-emoji--button{
+                margin-top: 10px;
+            }
+        }
+    }
+}

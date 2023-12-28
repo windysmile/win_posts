@@ -1,0 +1,11 @@
+.profile-swapper{
+    padding: 5px 10px;
+    .profile-img{
+        height: inherit;
+        width: inherit;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

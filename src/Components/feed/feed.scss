@@ -1,0 +1,114 @@
+@import '../../variables.scss';
+
+.feed-swrapper {
+    width: 50%;
+    padding: 0 10px;
+
+    .posts {
+        border-radius: 10px;
+        padding: 10px;
+        background: $theme-gray-white;
+
+        .mode-post-media {
+            border-top: 1px solid $theme-border-dark;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+
+            .button-media {
+                font-size: 1rem;
+                border-radius: 10px;
+                margin-top: 5px;
+                width: 33%;
+
+                svg {
+                    margin-right: 10px;
+                    color: $theme-base;
+                }
+            }
+        }
+    }
+
+    .posts-view {
+        .box-posts {
+            background-color: $theme-gray-white;
+            border: 1px solid $theme-gray-white;
+            border-radius: 10px;
+            margin-top: 10px;
+            padding: 5px 0;
+
+            .owner {
+                display: flex;
+                justify-content: start;
+                margin: 10px 0;
+                border-radius: 10px;
+
+                .owner-swrapper {
+                    .posts-date {
+                        font-size: 0.8rem;
+                        color: $theme-font-dark;
+                    }
+                }
+            }
+
+            .posts-content {
+                background-color: white;
+                min-height: 200px;
+                font-size: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .show-person-action {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 10px 0px 10px;
+                border-bottom: 1px solid $theme-border-dark;
+                padding-bottom: 5px;
+
+                .feeling-content {
+                    display: flex;
+                    align-items: start;
+
+                    .icon-feeling {
+                        color: $theme-base;
+                    }
+
+                    .action-person {
+                        font-size: 0.8rem;
+                        margin-left: 5px;
+                    }
+                }
+                .comments-counter-content{
+                    display: flex;
+                    align-items: start;
+                    font-size: 0.8rem;
+                    .counter-text{
+                        span{
+                            padding: 3px;
+                            color: $theme-font-dark;
+                        }
+                    }
+                }
+            }
+
+            .like-comment-share {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 10px;
+
+                button {
+                    font-size: 1rem;
+                    border-radius: 5px;
+                    width: 33%;
+
+                    span {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
