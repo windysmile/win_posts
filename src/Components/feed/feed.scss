@@ -23,7 +23,7 @@
 
                 svg {
                     margin-right: 10px;
-                    color: $theme-base;
+                    color: $theme-base-font;
                 }
             }
         }
@@ -73,7 +73,7 @@
                     align-items: start;
 
                     .icon-feeling {
-                        color: $theme-base;
+                        color: $theme-base-font;
                     }
 
                     .action-person {
@@ -107,6 +107,9 @@
                     span {
                         margin-left: 5px;
                     }
+                }
+                button.active{
+                    color: $theme-base-font;
                 }
             }
         }

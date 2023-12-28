@@ -76,8 +76,10 @@ function Feed() {
                 {obj.comments.length > 0 && boxCounterComments(obj)}
             </div>
             <div className="like-comment-share">
-                <IconButton onClick={() => handleFeeling(obj)}>
-                    <ThumbUpOffAltIcon className="icon" fontSize="small" />
+                <IconButton onClick={() => handleFeeling(obj)} className={obj.feelingActionPerson.findIndex((e) => e.person === userInfo.key) !== -1 ? 'active' : ''}>
+                    {obj.feelingActionPerson.findIndex((e) => e.person === userInfo.key) !== -1 ?
+                        <ThumbUpAltIcon className="icon" fontSize="small" /> : <ThumbUpOffAltIcon className="icon" fontSize="small" />
+                    }
                     <span>Like</span>
                 </IconButton>
                 <IconButton onClick={() => handleOpenComments(obj)}>
