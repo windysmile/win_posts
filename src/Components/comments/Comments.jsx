@@ -10,12 +10,6 @@ function Comments(posts) {
     const userInfo = useSelector((params) => params.profile.profileInfo);
     const dispatch = useDispatch();
 
-    const commentsShowPer = {
-        current: 1,
-        limit: 3,
-        last: posts.comments?.lenght
-    }
-
     const addComment = (e) => {
         dispatch(addComments({
             ...posts,

@@ -1,0 +1,7 @@
+
+@import '../../variables.scss';
+
+label{
+    border: 1px solid $theme-border-dark !important; 
+    svg{ display: none; }
+}

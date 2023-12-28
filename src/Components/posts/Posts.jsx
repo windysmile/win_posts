@@ -29,6 +29,7 @@ const style = {
 };
 
 function Posts() {
+
     const userInfo = useSelector((params) => params.profile.profileInfo);
     const dispatch = useDispatch();
     const [posts, setPosts] = useState({
@@ -36,19 +37,19 @@ function Posts() {
     })
     const [open, setOpen] = useState(false);
     const [dragdrop, setDragdrop] = useState(false);
+    const [files, setFiles] = useState([]);
 
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const handleOpenDragdrop = () => setDragdrop(true);
-    const handleCloseDragdrop = () => setDragdrop(false);
+    const handleDragdrop = (isOpen) => setDragdrop(isOpen)
 
     const handlePosts = () => {
         dispatch(addPosts({ 
             date: moment().format(), 
             actionPerson: userInfo,
             text: posts.text, 
-            photos: [], 
+            photos: files, 
             videos: [],  
             feeling: {
                 like: 0,
@@ -61,6 +62,9 @@ function Posts() {
             isOpenComment: false
         }))
         handleClose();
+        setPosts({ text:'' })
+        setFiles([])
+        setDragdrop(false)
     }
 
     const handleOnEnter = (text) => console.log(text);
@@ -116,14 +120,14 @@ function Posts() {
                                 </InputEmoji>
                             </div>
                             <div className="drag-drop">
-                                {dragdrop && <Dragdropfile ></Dragdropfile>}
+                                {dragdrop && <Dragdropfile files={files} setFiles={setFiles}></Dragdropfile>}
                             </div>
                             <div className="photo-video-posts">
                                 <div className="label-posts">
                                     <span>Add it to your post.</span>
                                 </div>
                                 <div className="button-photo-video">
-                                    <IconButton>
+                                    <IconButton onClick={() => handleDragdrop(!dragdrop)}>
                                         <PhotoLibraryIcon className="icon" fontSize="large"></PhotoLibraryIcon>    
                                     </IconButton>
                                     <IconButton>

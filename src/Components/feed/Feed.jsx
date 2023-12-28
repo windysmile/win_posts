@@ -15,13 +15,13 @@ import moment from "moment";
 import { addFeeling, updateComment } from "../../Features/winDataSlice";
 import EFeeling from "../../Features/enum";
 import Comments from "../comments/Comments";
+import PhotoAlbum from "react-photo-album";
 
 
 function Feed() {
     const userInfo = useSelector((params) => params.profile.profileInfo);
     const feedPosts = useSelector((params) => params.posts);
     const menuIndex = useSelector((params) => params.menuIndex);
-    console.log(menuIndex)
     const dispatch = useDispatch();
 
     const handleOpenComments = (obj) => dispatch(updateComment(obj));
@@ -66,11 +66,23 @@ function Feed() {
                     </div>
                 </div>
             </div>
-            <div className="posts-content">
-                <div className="text-content">
-                    <span>{obj.text}</span>
+            {obj.photos.length === 0 &&
+                <div className="posts-text-content">
+                    <div className="text-content">
+                        <span>{obj.text}</span>
+                    </div>
                 </div>
-            </div>
+            }
+            {obj.photos.length > 0 &&
+                <div className="posts-media-content">
+                    <div className="text-upper">
+                        <span>{obj.text}</span>
+                    </div>
+                    <div className="photo-gallery">
+                        <PhotoAlbum layout="rows" photos={obj.photos} />
+                    </div>
+                </div>
+            }
             <div className="show-person-action">
                 {obj.feelingActionPerson.length > 0 && boxFeelingContent(obj)}
                 {obj.comments.length > 0 && boxCounterComments(obj)}

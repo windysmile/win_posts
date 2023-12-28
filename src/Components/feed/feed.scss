@@ -51,13 +51,20 @@
                 }
             }
 
-            .posts-content {
+            .posts-text-content {
                 background-color: white;
                 min-height: 200px;
                 font-size: 1rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+            }
+
+            .posts-media-content{
+                .text-upper{
+                    padding: 0 10px;
+                    margin-bottom: 10px;
+                }
             }
 
             .show-person-action {

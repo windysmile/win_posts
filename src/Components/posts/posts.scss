@@ -1,76 +1,97 @@
 @import '../../variables.scss';
 
-.add-posts{
+.add-posts {
     display: flex;
-    .input-posts{
+
+    .input-posts {
         width: 100%;
         background-color: white;
         padding: 0 15px;
         border-radius: 10px;
     }
 }
-.box-modal{
+
+.box-modal {
     border-radius: 5px;
-    .modal-container{
-        .header{
+
+    .modal-container {
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-bottom: 5px;
             border-bottom: 1px solid $theme-border-dark;
-            .title{
+
+            .title {
                 width: 90%;
                 text-align: center;
                 color: $theme-font-dark;
-                h2{
+
+                h2 {
                     margin: 0;
                 }
             }
-            .close{
+
+            .close {
                 width: 10%;
             }
         }
-        .body{
+
+        .body {
             padding: 10px 0;
-            .profile{
+
+            .profile {
                 display: flex;
                 justify-content: start;
-                .admin-posts{
-                    .limited-view{
-                        button{
+
+                .admin-posts {
+                    .limited-view {
+                        button {
                             border-radius: 5px;
                             font-size: 12px;
                             padding: 3px;
-                            span{
+
+                            span {
                                 padding-left: 3px;
                             }
                         }
                     }
                 }
             }
-            .text-posts{
+
+            .text-posts {
                 display: flex;
-                .react-emoji{
+
+                .react-emoji {
                     align-items: start;
-                    .react-input-emoji--container{
+
+                    .react-input-emoji--container {
                         border-radius: 5px !important;
-                        .react-input-emoji--wrapper{
-                            .react-input-emoji--placeholder{
+
+                        .react-input-emoji--wrapper {
+                            .react-input-emoji--placeholder {
                                 margin-top: 10px;
                                 align-items: start;
                             }
-                            .react-input-emoji--input{
+
+                            .react-input-emoji--input {
                                 min-height: 5rem;
                                 border-radius: 10px;
                             }
                         }
                     }
-                    .react-input-emoji--button{
+
+                    .react-input-emoji--button {
                         margin-top: 10px;
                     }
                 }
             }
-            .photo-video-posts{
+
+            .drag-drop {
+                margin: 5px 10px;
+            }
+
+            .photo-video-posts {
                 border: 1px solid $theme-border-dark;
                 border-radius: 5px;
                 margin: 5px 10px;
@@ -78,18 +99,21 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                .label-posts{
+
+                .label-posts {
                     width: 70%;
                 }
-                .button-photo-video{
+
+                .button-photo-video {
                     width: 30%;
                     display: flex;
                     justify-content: space-between;
                 }
             }
         }
-        .footer{
-            button{
+
+        .footer {
+            button {
                 border-radius: 5px;
                 background: $theme-base;
                 width: 100%;
