@@ -40,8 +40,7 @@ export const winDataSlice = createSlice({
       state.profile.profileInfo.fullname = action.payload.fullname;
     },
     addPosts: (state, action) => {
-      console.log(action.payload)
-      state.posts.push({ ...action.payload, key: randomString() });
+      state.posts.splice(0, 0, { ...action.payload, key: randomString() });
     },
     addFeeling: (state, action) => {
       const findPostsState = state.posts.find((e) => e.key === action.payload.post.key);

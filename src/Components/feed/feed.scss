@@ -8,6 +8,8 @@
         border-radius: 10px;
         padding: 10px;
         background: $theme-gray-white;
+        position: relative;
+        z-index: 2;
 
         .mode-post-media {
             border-top: 1px solid $theme-border-dark;
@@ -30,12 +32,15 @@
     }
 
     .posts-view {
+        position: relative;
+        z-index: 1;
         .box-posts {
             background-color: $theme-gray-white;
             border: 1px solid $theme-gray-white;
             border-radius: 10px;
             margin-top: 10px;
             padding: 5px 0;
+            position: relative;
 
             .owner {
                 display: flex;

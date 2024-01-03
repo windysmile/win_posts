@@ -45,12 +45,12 @@ function Posts() {
     const handleDragdrop = (isOpen) => setDragdrop(isOpen)
 
     const handlePosts = () => {
-        dispatch(addPosts({ 
-            date: moment().format(), 
+        dispatch(addPosts({
+            date: moment().format(),
             actionPerson: userInfo,
-            text: posts.text, 
-            photos: files, 
-            videos: [],  
+            text: posts.text,
+            photos: files,
+            videos: [],
             feeling: {
                 like: 0,
                 superb: 0,
@@ -62,7 +62,7 @@ function Posts() {
             isOpenComment: false
         }))
         handleClose();
-        setPosts({ text:'' })
+        setPosts({ text: '' })
         setFiles([])
         setDragdrop(false)
     }
@@ -70,7 +70,7 @@ function Posts() {
     const handleOnEnter = (text) => console.log(text);
 
     return (
-        <div className="add-posts">
+        <div className="add-posts anim-show-content">
             <Iconprofile size={'35px'} profile={userInfo}></Iconprofile>
             <InputBase
                 className="input-posts"
@@ -113,22 +113,24 @@ function Posts() {
                             <div className="text-posts">
                                 <InputEmoji
                                     value={''}
-                                    onChange={(e) => setPosts((value) => ({...value, text: e}))}
+                                    onChange={(e) => setPosts((value) => ({ ...value, text: e }))}
                                     cleanOnEnter
                                     onEnter={handleOnEnter}
                                     placeholder="What are you thinking?">
                                 </InputEmoji>
                             </div>
-                            <div className="drag-drop">
-                                {dragdrop && <Dragdropfile files={files} setFiles={setFiles}></Dragdropfile>}
-                            </div>
+                            {dragdrop &&
+                                <div className="drag-drop anim-show-content">
+                                    <Dragdropfile className="" files={files} setFiles={setFiles}></Dragdropfile>
+                                </div>
+                            }
                             <div className="photo-video-posts">
                                 <div className="label-posts">
                                     <span>Add it to your post.</span>
                                 </div>
                                 <div className="button-photo-video">
                                     <IconButton onClick={() => handleDragdrop(!dragdrop)}>
-                                        <PhotoLibraryIcon className="icon" fontSize="large"></PhotoLibraryIcon>    
+                                        <PhotoLibraryIcon className="icon" fontSize="large"></PhotoLibraryIcon>
                                     </IconButton>
                                     <IconButton>
                                         <VideoLibraryIcon className="icon" fontSize="large"></VideoLibraryIcon>

@@ -53,8 +53,8 @@ function Feed() {
         </div>;
     }
 
-    const boxPostsContent = feedPosts.slice().reverse().map((obj) =>
-        <div className="box-posts" key={obj}>
+    const boxPostsContent = feedPosts.map((obj) =>
+        <div className="box-posts anim-show-content" key={obj.key}>
             <div className="owner">
                 <Iconprofile size={'35px'} profile={obj.actionPerson}></Iconprofile>
                 <div className="owner-swrapper">
